@@ -16,7 +16,7 @@ package _02_Intro_To_Abstract_Classes_and_Interfaces;
  * The abstract keyword is added to the class declaration to make it an abstract
  * class here.
  */
-public abstract class AbstractClassDemo {
+public abstract class AbstractClassDemo  {
 
     // An abstract class can contain member variables.
     int num;

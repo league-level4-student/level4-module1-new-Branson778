@@ -1,7 +1,7 @@
 package _00_Intro_to_Exceptions;
 
 public class ExceptionsDemo {
-
+	static NegativeNumberException pop = new NegativeNumberException();
     /*
      * Exceptions make it easier to debug or handle unexpected run time errors
      * when they arise in your programs.
@@ -44,6 +44,12 @@ try {
 } catch (Exception e) {
 	e.printStackTrace();
 }
+testPositive(0);
+testPositive(-15);
+testPositive(67);
+testPositive(-5);
+testPositive(44455);
+testPositive(15);
         /*
          * 2. Call the testFiveOrGreater method with a value less than 5 inside
          * the try block.
@@ -58,16 +64,35 @@ try {
         // 4. Run the program. Did the stack trace print out?
         //YES
     }
-
+    static void testPositive(int i) {
+    	try {
+    		if(i>0) {
+    			System.out.println("Number Is Positive");
+    		}
+    		else if (i<0) {
+    			throw new NegativeNumberException();
+    		}
+    		else {
+    			throw new NullPointerException();
+    		}
+    	} catch (NegativeNumberException e) {
+    		//e.printStackTrace();
+    		pop.scaryPopup();
+    		
+    	} catch (NullPointerException e) {
+    		//e.printStackTrace();
+    		 pop.scaryPopup();
+    	}
+     }
     /*
      * 5. Create your own exception by making a new class called
      * NegativeNumberException that extends Exception.
-     * 
+     * done
      * 6. Add a method to your exception called scaryPopup that creates a
      * JOptionPane Message Dialog telling the user they have triggered a
      * critical error in their computer.
-     */
-
+     */ 
+     //done
     /*
      * 7. Create a static method in this class called testPositive. It should
      * take a single number as a parameter and throw a NegativeNumberException
