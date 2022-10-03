@@ -21,9 +21,12 @@ class Dog extends Animal {
 }
 
 class Bird extends Animal {
-    public void speak() {
-        System.out.println("Tweet!");
-    }
+    //public void speak() {
+    //    System.out.println("Tweet!");
+   // }
+	public void eat() {
+		System.out.println("I am eating a worm");
+	}
 }
 
 class Fish extends Animal {
@@ -46,8 +49,9 @@ public class PolymorphismDemo {
          * declared as an Animal on the left side.
          */
 
-        Animal animal = new Animal();
-
+        Animal animal = new Bird();
+          animal.speak();
+          ((Bird) animal).eat();
         /*
          * 2. Call the speak method and run the program.
          * 

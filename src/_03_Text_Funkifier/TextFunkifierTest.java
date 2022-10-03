@@ -44,6 +44,7 @@ public class TextFunkifierTest {
 
     @Test
     public void testCustomString() {
-
+        CustomFunk cf = new CustomFunk("This is also a test");
+        assertEquals("Tssl tt",cf.funkifyText());
     }
 }
